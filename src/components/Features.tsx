@@ -29,8 +29,8 @@ const features = [
 
 export default function Features() {
   return (
-    <div className="flex flex-col items-center px-6 lg:px-8">
-      <h2 className="text-3xl sm:text-4xl my-8 py-2 font-bold tracking-tight border-b-2">
+    <div className="flex flex-col items-center px-6 lg:px-8 my-10">
+      <h2 className="text-3xl sm:text-4xl py-4 mb-4 font-bold tracking-tight border-b-2">
         Serviços
       </h2>
       {/*Big Screen*/}
