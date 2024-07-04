@@ -1,62 +1,88 @@
-import { ArrowPathIcon, RectangleGroupIcon, FingerPrintIcon, CodeBracketIcon } from '@heroicons/react/24/outline'
+import Image from "next/image";
 
 const features = [
-    {
-        name: 'Identidade Visual',
-        description:
-            'Morbi viverra dui mi arcu sed. Tellus semper adipiscing suspendisse semper morbi. Odio urna massa nunc massa.',
-        icon: RectangleGroupIcon,
-    },
-    {
-        name: 'Construção de sites',
-        description:
-            'Sit quis amet rutrum tellus ullamcorper ultricies libero dolor eget. Sem sodales gravida quam turpis enim lacus amet.',
-        icon: CodeBracketIcon,
-    },
-    {
-        name: 'Simple queues',
-        description:
-            'Quisque est vel vulputate cursus. Risus proin diam nunc commodo. Lobortis auctor congue commodo diam neque.',
-        icon: ArrowPathIcon,
-    },
-    {
-        name: 'Advanced security',
-        description:
-            'Arcu egestas dolor vel iaculis in ipsum mauris. Tincidunt mattis aliquet hac quis. Id hac maecenas ac donec pharetra eget.',
-        icon: FingerPrintIcon,
-    },
-]
+  {
+    title: "Pilates Clássico",
+    description:
+      "Morbi viverra dui mi arcu sed. Tellus semper adipiscing suspendisse semper morbi. Odio urna massa nunc massa.",
+    picture: "/pilates.jpg",
+  },
+  {
+    title: "Pilates Funcional",
+    description:
+      "Sit quis amet rutrum tellus ullamcorper ultricies libero dolor eget. Sem sodales gravida quam turpis enim lacus amet.",
+    picture: "/pilates.jpg",
+  },
+  {
+    title: "Massagem de liberação",
+    description:
+      "Quisque est vel vulputate cursus. Risus proin diam nunc commodo. Lobortis auctor congue commodo diam neque.",
+    picture: "/massage.jpg",
+  },
+  {
+    title: "Massagem Terapêutica",
+    description:
+      "Arcu egestas dolor vel iaculis in ipsum mauris. Tincidunt mattis aliquet hac quis. Id hac maecenas ac donec pharetra eget.",
+    picture: "/massage.jpg",
+  },
+];
 
 export default function Features() {
-    return (
-        <div className="bg-white py-24 sm:py-32">
-            <div className="mx-auto max-w-7xl px-6 lg:px-8">
-                <div className="mx-auto max-w-2xl lg:text-center">
-                    <h2 className="text-base font-semibold leading-7 text-[#f1b145]">Deploy faster</h2>
-                    <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                        Everything you need to deploy your app
-                    </p>
-                    <p className="mt-6 text-lg leading-8 text-gray-600">
-                        Quis tellus eget adipiscing convallis sit sit eget aliquet quis. Suspendisse eget egestas a elementum
-                        pulvinar et feugiat blandit at. In mi viverra elit nunc.
-                    </p>
-                </div>
-                <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
-                    <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
-                        {features.map((feature) => (
-                            <div key={feature.name} className="relative pl-16">
-                                <dt className="text-base font-semibold leading-7 text-gray-900">
-                                    <div className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-[#f1b145]">
-                                        <feature.icon className="h-6 w-6 text-white" aria-hidden="true" />
-                                    </div>
-                                    {feature.name}
-                                </dt>
-                                <dd className="mt-2 text-base leading-7 text-gray-600">{feature.description}</dd>
-                            </div>
-                        ))}
-                    </dl>
-                </div>
+  return (
+    <div className="flex flex-col items-center px-6 lg:px-8">
+      <h2 className="text-3xl sm:text-4xl my-8 py-2 font-bold tracking-tight border-b-2">
+        Serviços
+      </h2>
+      {/*Big Screen*/}
+      <div className="hidden sm:flex sm:flex-col">
+        {features.map((feature, index) => (
+          <div key={feature.title} className="flex max-w-4xl gap-8 mt-8">
+            {index === 0 || index % 2 === 0 ? (
+              <Image
+                src={feature.picture}
+                alt=""
+                height="200"
+                width="400"
+                className="rounded-xl"
+              />
+            ) : null}
+            <div className="flex flex-col gap-4 justify-center">
+              <h3 className="text-2xl font-bold">{feature.title}</h3>
+              <p>{feature.description}</p>
             </div>
-        </div>
-    )
+            {index % 2 !== 0 ? (
+              <Image
+                src={feature.picture}
+                alt=""
+                height="200"
+                width="400"
+                className="rounded-xl"
+              />
+            ) : null}
+          </div>
+        ))}
+      </div>
+      {/*Small Screen*/}
+      <div className="flex flex-col sm:hidden">
+        {features.map((feature, index) => (
+          <div
+            key={feature.title}
+            className="flex flex-col items-center max-w-xl gap-8 mt-8"
+          >
+            <div className="flex flex-col gap-4 justify-center">
+              <h3 className="text-2xl font-bold">{feature.title}</h3>
+              <p>{feature.description}</p>
+            </div>
+            <Image
+              src={feature.picture}
+              alt=""
+              height="200"
+              width="400"
+              className="rounded-xl"
+            />
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 }
