@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { MdClose, MdMenu } from "react-icons/md";
+import WhatsappCTA from "./WhatsappCTA";
 
 const navigation = [
   { name: "Sobre nós", href: "#", current: false },
@@ -65,15 +66,13 @@ export default function NavBar() {
           ))}
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
-            Log in <span aria-hidden="true">&rarr;</span>
-          </a>
+          <WhatsappCTA />
         </div>
       </nav>
       {/*Small Screen Navigation Menu*/}
       <>
         {mobileMenu ? (
-          <div className="flex flex-col justify-between h-[calc(100vh-80px)] bg-white">
+          <div className="flex flex-col items-center pb-8 justify-between h-[calc(100vh-80px)] bg-white">
             <div className="flex flex-col justify-center items-center gap-8 pt-8">
               {navigation.map((item) => (
                 <a
@@ -85,15 +84,7 @@ export default function NavBar() {
                 </a>
               ))}
             </div>
-            <div className="w-full h-24 flex items-center justify-center gap-8">
-              <div className="p-4 bg-gray-300 rounded-xl font-bold">
-                Log in &rarr;
-              </div>
-              <div className="h-3/4 border-l-2 border-gray-300"></div>
-              <div className="p-4 bg-primary rounded-xl font-bold text-white">
-                Sign up &rarr;
-              </div>
-            </div>
+            <WhatsappCTA />
           </div>
         ) : null}
       </>
