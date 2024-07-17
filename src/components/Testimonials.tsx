@@ -49,7 +49,7 @@ export default function Testimonials() {
           {testimonials.map((testimonial) => (
             <div
               key={testimonial.name}
-              className="flex flex-col gap-3 overflow-hidden items-center justify-center w-full max-w-72 m-2 p-6 shadow-xl rounded-xl"
+              className="flex flex-col gap-3 overflow-hidden items-center justify-center w-full max-w-72 m-2 p-6 shadow-xl rounded-xl bg-white"
             >
               <div className="flex w-full">
                 <MdStar

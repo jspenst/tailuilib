@@ -47,7 +47,10 @@ const FaqItem: React.FC<FaqItemProps> = ({ question, answer }) => {
 
 export default function FAQ() {
   return (
-    <div className="flex flex-col items-center gap-2 w-full px-4">
+    <div className="flex flex-col items-center gap-2 w-full px-4 my-8">
+      <h2 className="text-3xl sm:text-4xl py-4 mb-4 font-bold tracking-tight border-b-2">
+        Perguntas Frequentes
+      </h2>
       {faqs.map((faq, index) => (
         <FaqItem key={index} question={faq.question} answer={faq.answer} />
       ))}
