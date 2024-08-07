@@ -12,7 +12,7 @@ const team = [
     name: "Daiane Alves Afonso",
     job: "Fisioterapeuta",
     description:
-      "Fisioterapeuta há 13 anos, formada pela ULBRA. Pós-graduada em Pilates pelo Instituto São Paulo. Instrutora e Empresária na Core Pilates Floripa",
+      "Graduada em Fisioterapia pela Universidade Anhanguera de Pelotas e especialista em Pilates pela Voll Pilates. Cursa pós-graduação em fisioterapia nas algias posturais da coluna vertebral",
     picture: "/daiane.png",
   },
   {
@@ -26,7 +26,7 @@ const team = [
 
 export default function Team() {
   return (
-    <div className="flex flex-col items-center w-full">
+    <div className="flex flex-col items-center w-full" id="team">
       <div className="flex flex-col py-10 items-center px-6 lg:px-8 max-w-5xl">
         <h2 className="text-3xl sm:text-4xl py-2 font-bold tracking-tight border-b-2">
           Equipe

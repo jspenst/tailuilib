@@ -4,17 +4,17 @@ import { MdClose, MdMenu } from "react-icons/md";
 import WhatsappCTA from "./WhatsappCTA";
 
 const navigation = [
-  { name: "Sobre nós", href: "#", current: false },
-  { name: "Serviços", href: "#", current: true },
-  { name: "Portfolio", href: "#", current: false },
-  { name: "Blog", href: "#", current: false },
-  { name: "Contato", href: "#", current: false },
+  { name: "Serviços", href: "#features", current: false },
+  { name: "Equipe", href: "#team", current: true },
+  { name: "Depoimentos", href: "#testimonials", current: false },
+  { name: "FAQ", href: "#faq", current: false },
+  { name: "Contato", href: "#footer", current: false },
 ];
 
 const logo = {
-  src: "vercel.svg",
+  src: "logo-small.png",
   alt: "Logo",
-  height: "h-10",
+  height: "h-16",
   span: "Logo",
 };
 
@@ -24,10 +24,10 @@ export default function NavBar() {
     mobileMenu ? setMobileMenu(false) : setMobileMenu(true);
   };
   return (
-    <header className=" fixed inset-x-0 top-0 z-50 divide-y h-[85px] bg-white">
+    <header className=" fixed inset-x-0 top-0 z-50 divide-y h-[84px] bg-white">
       {/*Big Screen Navigation Menu*/}
       <nav
-        className="flex items-center justify-between p-4 lg:px-8"
+        className="flex items-center justify-between p-4 lg:px-8 h-full"
         aria-label="Global"
       >
         <div className="flex lg:flex-1">
@@ -72,7 +72,10 @@ export default function NavBar() {
       {/*Small Screen Navigation Menu*/}
       <>
         {mobileMenu ? (
-          <div className="flex flex-col items-center pb-8 justify-between h-[calc(100vh-80px)] bg-white">
+          <div
+            className="flex flex-col items-center pb-8 justify-between h-[calc(100vh-80px)] bg-white"
+            onClick={() => toggleMobile()}
+          >
             <div className="flex flex-col justify-center items-center gap-8 pt-8">
               {navigation.map((item) => (
                 <a

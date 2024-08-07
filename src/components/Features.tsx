@@ -2,34 +2,40 @@ import Image from "next/image";
 
 const features = [
   {
-    title: "Pilates Clássico",
+    title: "Pilates com aparelhos",
     description:
-      "Morbi viverra dui mi arcu sed. Tellus semper adipiscing suspendisse semper morbi. Odio urna massa nunc massa.",
+      "Nessa modalidade de exercícios são utilizados aparelhos de madeira e metal desenvolvidos por Joseph Pilates, que foram aperfeiçoados com o tempo. São eles barrel, chair, cadilac e reformer.⠀Eles utilizam molas, alças e barras que podem facilitar ou dificultar os movimentos, permitindo que alunos de todas as idades e condições físicas se beneficiem do Pilates, de acordo com sua capacidade, grau de dificuldade e condicionamento.⠀",
+    picture: "/aparelhos.jpg",
+  },
+  {
+    title: "Pilates funcional",
+    description:
+      "Uma das principais características dessa variação é a combinação de exercícios ritmados e frequentes que tem como objetivo aumentar consideravelmente a frequência cardíaca do praticante, sendo considerada um treino aeróbico bastante eficiente. O tipo funcional também faz uso da agilidade do praticante para que ele execute os exercícios de forma cada vez mais rápida, sem perder o equilíbrio e a postura correta durante a prática. ",
     picture: "/pilates.jpg",
   },
   {
-    title: "Pilates Funcional",
-    description:
-      "Sit quis amet rutrum tellus ullamcorper ultricies libero dolor eget. Sem sodales gravida quam turpis enim lacus amet.",
-    picture: "/pilates.jpg",
-  },
-  {
-    title: "Massagem de liberação",
-    description:
-      "Quisque est vel vulputate cursus. Risus proin diam nunc commodo. Lobortis auctor congue commodo diam neque.",
-    picture: "/massage.jpg",
-  },
-  {
-    title: "Massagem Terapêutica",
+    title: "Massagem terapêutica",
     description:
       "Arcu egestas dolor vel iaculis in ipsum mauris. Tincidunt mattis aliquet hac quis. Id hac maecenas ac donec pharetra eget.",
+    picture: "/terapeutica.jpg",
+  },
+  {
+    title: "Massagem quântica",
+    description:
+      "A massagem quântica atua no processo de tratamento psicoterapeutico, no relaxamento e revitalização energética do corpo físico, mental, emocional e astral..",
     picture: "/massage.jpg",
+  },
+  {
+    title: "Liberação miofascial com ventosaterapia",
+    description:
+      "As ventosas agem sobre os pontos gatilhos da dor. Essa técnica consta na sucção desses pontos de dor, fazendo com que aumente o fluxo sanguíneo e melhore a área de dor, através de uma vascularização no local. O resultado disso é uma maior oxigenação destes tecidos, que permite a liberação de toxinas do sangue e do músculo com maior agilidade.",
+    picture: "/ventosaterapia.jpg",
   },
 ];
 
 export default function Features() {
   return (
-    <div className="flex flex-col items-center w-full">
+    <div className="flex flex-col items-center w-full bg-white" id="features">
       <div className="flex flex-col items-center px-6 lg:px-8 my-10 max-w-5xl">
         <h2 className="text-3xl sm:text-4xl py-4 mb-4 font-bold tracking-tight border-b-2">
           Serviços
@@ -37,14 +43,17 @@ export default function Features() {
         {/*Big Screen*/}
         <div className="hidden sm:flex sm:flex-col">
           {features.map((feature, index) => (
-            <div key={feature.title} className="flex max-w-4xl gap-8 mt-8">
+            <div
+              key={feature.title}
+              className="flex max-w-4xl gap-8 mt-8 items-center"
+            >
               {index === 0 || index % 2 === 0 ? (
                 <Image
                   src={feature.picture}
                   alt=""
-                  height="200"
-                  width="400"
-                  className="rounded-xl"
+                  height="250"
+                  width="500"
+                  className="rounded-xl h-[250px] w-[500px]"
                 />
               ) : null}
               <div className="flex flex-col gap-4 justify-center">

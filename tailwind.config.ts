@@ -19,11 +19,12 @@ const config: Config = {
       indigo: colors.indigo,
       yellow: colors.yellow,
       blue: colors.blue,
-      primary: "#1d4ed8",
+      primary: "#0e5f60",
     },
     extend: {
       backgroundImage: {
         "hero-bg": "url('/hero-background.jpg')",
+        "bg-hero-small": "url('/hero-background-small.jpg')",
       },
     },
   },
