@@ -22,12 +22,19 @@ const team = [
       "Formada em Fisioterapia pela UDESC. Instrutora de Pilates há 3 anos. Experiência em Pilates solo e aparelhos. ",
     picture: "/victoria.png",
   },
+  {
+    name: "Bruna Leal",
+    job: "Fisioterapeuta",
+    description:
+      "Formada em Fisioterapia pela UDESC. Instrutora de Pilates há 3 anos. Experiência em Pilates solo e aparelhos. ",
+    picture: "/victoria.png",
+  },
 ];
 
 export default function Team() {
   return (
     <div className="flex flex-col items-center w-full" id="team">
-      <div className="flex flex-col py-10 items-center px-6 lg:px-8 max-w-5xl">
+      <div className="flex flex-col py-10 items-center px-6 lg:px-8 max-w-8xl">
         <h2 className="text-3xl sm:text-4xl py-2 font-bold tracking-tight border-b-2">
           Equipe
         </h2>

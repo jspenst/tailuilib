@@ -16,14 +16,14 @@ const features = [
   {
     title: "Massagem terapêutica",
     description:
-      "Arcu egestas dolor vel iaculis in ipsum mauris. Tincidunt mattis aliquet hac quis. Id hac maecenas ac donec pharetra eget.",
-    picture: "/terapeutica.jpg",
+      "Indicada para dores musculares, lesões, tensões crônicas, problemas de mobilidade e cefaléia tensional. É aplicada pressão moderada aa intensa e usada a técnica auxiliar de liberação miofascial e ventosaterapia",
+    picture: "/massage.jpg",
   },
   {
-    title: "Massagem quântica",
+    title: "Massagem relaxante",
     description:
-      "A massagem quântica atua no processo de tratamento psicoterapeutico, no relaxamento e revitalização energética do corpo físico, mental, emocional e astral..",
-    picture: "/massage.jpg",
+      "Com propriedades relaxantes e calmantes, libera a tensão muscular e ativa a circulação sanguínea. Aplicação de pressão suave a moderada",
+    picture: "/terapeutica.jpg",
   },
   {
     title: "Liberação miofascial com ventosaterapia",
