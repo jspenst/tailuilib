@@ -5,8 +5,8 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Tailuilib",
-  description: "A tailwind library to easily create UIs",
+  title: "Core Pilates Floripa",
+  description: "Site da Core Pilates",
 };
 
 export default function RootLayout({

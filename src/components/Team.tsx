@@ -24,10 +24,9 @@ const team = [
   },
   {
     name: "Bruna Leal",
-    job: "Fisioterapeuta",
-    description:
-      "Formada em Fisioterapia pela UDESC. Instrutora de Pilates há 3 anos. Experiência em Pilates solo e aparelhos. ",
-    picture: "/victoria.png",
+    job: "Massoterapeuta",
+    description: "Técnica em Massoterapia. ",
+    picture: "/bruna.png",
   },
 ];
 

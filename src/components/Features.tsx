@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Markdown from "react-markdown";
 
 const features = [
   {
@@ -16,13 +17,7 @@ const features = [
   {
     title: "Massagem terapêutica",
     description:
-      "Indicada para dores musculares, lesões, tensões crônicas, problemas de mobilidade e cefaléia tensional. É aplicada pressão moderada aa intensa e usada a técnica auxiliar de liberação miofascial e ventosaterapia",
-    picture: "/massage.jpg",
-  },
-  {
-    title: "Massagem relaxante",
-    description:
-      "Com propriedades relaxantes e calmantes, libera a tensão muscular e ativa a circulação sanguínea. Aplicação de pressão suave a moderada",
+      "A massagem é a arte milenar de cura que proporciona alívio, relaxamento e bem-estar. Além de aliviar as tensões e dores musculares, promove a circulação sanguínea e reduz o estresse , equilibrando corpo e mente. A massagem terapêutica é profunda e indicada para dores crônicas com aplicação de ventosaterapia.",
     picture: "/terapeutica.jpg",
   },
   {
@@ -30,6 +25,16 @@ const features = [
     description:
       "As ventosas agem sobre os pontos gatilhos da dor. Essa técnica consta na sucção desses pontos de dor, fazendo com que aumente o fluxo sanguíneo e melhore a área de dor, através de uma vascularização no local. O resultado disso é uma maior oxigenação destes tecidos, que permite a liberação de toxinas do sangue e do músculo com maior agilidade.",
     picture: "/ventosaterapia.jpg",
+  },
+  {
+    title: "Outras Massagens:",
+    description: `**Massagem relaxante:** Promove o alívio das tensões do dia a dia, relaxamento profundo e bem-estar.  
+      **Drenagem Linfática:** Técnica que estimula o sistema linfático, ajudando a eliminar toxinas e reduzir inchaços.  
+      **Massagem modeladora:** Técnica vigorosa que atua diretamente nas áreas com acúmulo de gordura ajudando a remodelar o corpo.  
+      **Esfoliação corporal/facial:** Técnica que remove as células mortas da pele promovendo a renovação celular.  
+      **SPA dos pés:** Tratamento relaxante que inclui escalda pés, esfoliação, hidratação e massagem, deixando os pés renovados e revitalizados.  
+      **Massagem facial:** Técnica que utiliza movimentos suaves e precisos para estimular a circulação, melhorar o tônus muscular e promover uma pele mais saudável e rejuvenescida.`,
+    picture: "/massage.jpg",
   },
 ];
 
@@ -58,7 +63,7 @@ export default function Features() {
               ) : null}
               <div className="flex flex-col gap-4 justify-center">
                 <h3 className="text-2xl font-bold">{feature.title}</h3>
-                <p>{feature.description}</p>
+                <Markdown>{feature.description}</Markdown>
               </div>
               {index % 2 !== 0 ? (
                 <Image
@@ -81,7 +86,7 @@ export default function Features() {
             >
               <div className="flex flex-col gap-4 justify-center">
                 <h3 className="text-2xl font-bold">{feature.title}</h3>
-                <p>{feature.description}</p>
+                <Markdown>{feature.description}</Markdown>
               </div>
               <Image
                 src={feature.picture}

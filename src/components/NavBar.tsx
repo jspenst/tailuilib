@@ -73,7 +73,7 @@ export default function NavBar() {
       <>
         {mobileMenu ? (
           <div
-            className="flex flex-col items-center pb-8 justify-between h-[calc(100vh-80px)] bg-white"
+            className="flex flex-col items-center pb-16 justify-between h-[calc(100vh-80px)] bg-white"
             onClick={() => toggleMobile()}
           >
             <div className="flex flex-col justify-center items-center gap-8 pt-8">
