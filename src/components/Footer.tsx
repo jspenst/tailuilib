@@ -31,8 +31,8 @@ export default function Footer() {
           </div>
           <div>
             <h3 className="font-bold">Endereço</h3>
-            <div className="flex gap-2">
-              <BiSolidMap className="text-xl" />
+            <div className="flex gap-2 items-center">
+              <BiSolidMap className="text-5xl" />
               <p>
                 Rua João Gualberto Soares n° 117, sala 04 - Ingleses -
                 Florianópolis - SC
