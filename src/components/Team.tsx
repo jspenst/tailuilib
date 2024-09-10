@@ -1,62 +1,68 @@
-import Image from "next/image";
+import { FaBehance, FaGithub, FaLinkedin } from "react-icons/fa6";
 
 const team = [
   {
-    name: "Cris Lima",
-    job: "Fisioterapeuta",
-    description:
-      "Fisioterapeuta há 13 anos, formada pela ULBRA. Pós-graduada em Pilates pelo Instituto São Paulo. Instrutora e Empresária na Core Pilates Floripa",
-    picture: "/cris.png",
+    name: "Jaime Spenst",
+    job: "Programador",
+    description: "",
+    picture: "/images/jaime.png",
+    linkedin: "https://www.linkedin.com/in/jaimespenst/",
+    github: "https://github.com/jspenst",
+    behance: "",
   },
   {
-    name: "Daiane Alves Afonso",
-    job: "Fisioterapeuta",
-    description:
-      "Graduada em Fisioterapia pela Universidade Anhanguera de Pelotas e especialista em Pilates pela Voll Pilates. Cursa pós-graduação em fisioterapia nas algias posturais da coluna vertebral",
-    picture: "/daiane.png",
-  },
-  {
-    name: "Victória Milezzi",
-    job: "Fisioterapeuta",
-    description:
-      "Formada em Fisioterapia pela UDESC. Instrutora de Pilates há 3 anos. Experiência em Pilates solo e aparelhos. ",
-    picture: "/victoria.png",
-  },
-  {
-    name: "Bruna Leal",
-    job: "Massoterapeuta",
-    description: "Técnica em Massoterapia. ",
-    picture: "/bruna.png",
+    name: "Alaís Souza Ferreira Spenst",
+    job: "Designer Gráfico",
+    description: "",
+    picture: "/images/alais.png",
+    linkedin: "https://www.linkedin.com/in/alais-souza-ferreira/",
+    github: "",
+    behance: "https://www.behance.net/engajamedesign",
   },
 ];
 
 export default function Team() {
   return (
     <div className="flex flex-col items-center w-full" id="team">
-      <div className="flex flex-col py-10 items-center px-6 lg:px-8 max-w-8xl">
-        <h2 className="text-3xl sm:text-4xl py-2 font-bold tracking-tight border-b-2">
-          Equipe
+      <div className="flex flex-col px-6 lg:px-8 max-w-6xl w-full gap-10">
+        <h2 className="text-primary w-fit bg-black text-xl sm:text-2xl py-1 px-4 mb-4 font-bold">
+          EQUIPE
         </h2>
-        <div className="flex flex-wrap justify-center sm:gap-6">
+        <div className="flex flex-wrap justify-center gap-8">
           {team.map((member) => (
             <div
               key={member.name}
-              className="flex flex-col items-center w-72 mt-8 bg-white shadow-lg rounded-xl"
+              className="flex flex-col items-center w-96 mt-8 bg-[#ededed] shadow-2xl border rounded-xl"
             >
-              <Image
+              <img
                 src={member.picture}
-                alt=""
-                height="200"
-                width="200"
-                className="rounded-full p-4"
+                alt={member.name}
+                className="bg-white h-48 w-full object-contain"
               />
 
-              <div className="flex flex-col gap-2 justify-center p-4">
+              <div className="flex flex-col gap-2 items-center p-4">
                 <h3 className="text-2xl font-bold">{member.name}</h3>
                 <h4 className="text-lg text-gray-500 font-bold">
                   {member.job}
                 </h4>
-                <p>{member.description}</p>
+                {member.description ? <p>{member.description}</p> : null}
+                <div className="flex gap-6 text-lg">
+                  {member.linkedin ? (
+                    <a href={member.linkedin} target="_blank">
+                      <FaLinkedin />
+                    </a>
+                  ) : null}
+                  {member.github ? (
+                    <a href={member.github} target="_blank">
+                      <FaGithub />
+                    </a>
+                  ) : null}
+                  {member.behance ? (
+                    <a href={member.behance} target="_blank">
+                      <FaBehance />
+                    </a>
+                  ) : null}
+                </div>
               </div>
             </div>
           ))}

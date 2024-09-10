@@ -1,8 +1,7 @@
 import {
   BiLogoFacebook,
   BiLogoInstagram,
-  BiLogoSpotify,
-  BiLogoYoutube,
+  BiLogoLinkedin,
 } from "react-icons/bi";
 
 export default function SocialMedia() {
@@ -10,26 +9,26 @@ export default function SocialMedia() {
     <div className="flex flex-wrap items-center m-5 gap-2 text-2xl">
       <a
         className="p-1 bg-white rounded-full text-primary"
-        href="https://www.facebook.com/corepilatesingleses"
+        href="https://pt-br.facebook.com/engajamedesign"
         target="_blank"
       >
         <BiLogoFacebook className="text-3xl" />
       </a>
       <a
         className="p-1 bg-white rounded-full text-primary"
-        href="https://www.instagram.com/corepilatesfloripa/"
+        href="https://www.instagram.com/engajamedesign/"
         target="_blank"
       >
         <BiLogoInstagram className="text-3xl" />
       </a>
-      {/*
-      <a className="p-1 bg-white rounded-full text-primary" href="#">
-        <BiLogoYoutube />
+
+      <a
+        className="p-1 bg-white rounded-full text-primary"
+        href="#"
+        target="_blank"
+      >
+        <BiLogoLinkedin />
       </a>
-      <a className="p-1 bg-white rounded-full text-primary" href="#">
-        <BiLogoSpotify />
-      </a>
-      */}
     </div>
   );
 }

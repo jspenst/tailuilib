@@ -4,36 +4,49 @@ import { useState } from "react";
 const faqs = [
   {
     id: "1",
-    question: "O que é o Pilates?",
+    question:
+      "Por que investir em design gráfico profissional é importante para o meu negócio?",
     answer:
-      "O Pilates é um sistema de exercícios desenvolvido por Joseph Pilates no início do século 20. Ele se concentra no fortalecimento dos músculos centrais, melhorando a postura e a flexibilidade, e promovendo a consciência corporal.",
+      "O design gráfico profissional fortalece a identidade da sua marca, transmite credibilidade e diferencia você da concorrência. Com um design bem elaborado, você atrai mais clientes e deixa uma impressão duradoura.",
   },
   {
     id: "2",
-    question: "Pilates não é muito caro?",
+    question: "Como a criação de um site pode impactar minhas vendas?",
     answer:
-      "Entendemos que o custo pode ser uma preocupação, mas considere Pilates como um investimento em sua saúde e bem-estar. Além disso, oferecemos pacotes e planos de pagamento flexíveis para se adequarem ao seu orçamento. Venha fazer uma aula experimental gratuita e veja o valor que o Pilates pode agregar à sua vida.",
+      "Um site bem projetado é essencial para estabelecer uma presença online sólida. Ele funciona como sua vitrine digital, atraindo visitantes e convertendo-os em clientes com navegação intuitiva, visual atraente e conteúdo relevante.",
   },
   {
     id: "3",
     question:
-      "E se eu não for flexível ou forte o suficiente para fazer Pilates?",
+      "Qual a diferença entre tráfego pago e orgânico, e por que devo investir em tráfego pago?",
     answer:
-      "Pilates é para todos, independentemente do seu nível de flexibilidade ou força. Nossos instrutores experientes estão aqui para adaptar os exercícios às suas necessidades e habilidades, ajudando você a melhorar gradualmente. Cada pessoa tem um ponto de partida, e estamos aqui para apoiar seu progresso.",
+      "Tráfego pago é rápido e direcionado, alcançando seu público-alvo instantaneamente por meio de anúncios. Ao contrário do tráfego orgânico, que leva tempo para crescer, o tráfego pago aumenta rapidamente a visibilidade da sua marca, gerando resultados imediatos.",
   },
   {
     id: "4",
-    question:
-      "Tenho uma lesão ou condição de saúde. Ainda posso fazer Pilates?",
+    question: "Como a automação de vendas pode ajudar o meu negócio?",
     answer:
-      "Pilates é uma prática de baixo impacto, ideal para pessoas com lesões ou condições de saúde. Nossos instrutores são qualificados para trabalhar com uma variedade de necessidades e limitações físicas, criando um programa personalizado que respeita suas condições e promove a recuperação e fortalecimento.",
+      "Automatizar processos de vendas economiza tempo, reduz erros e melhora a experiência do cliente. Desde capturar leads até o acompanhamento pós-venda, a automação garante que você aproveite cada oportunidade de conversão sem esforço manual.",
   },
   {
     id: "5",
     question:
-      "Eu prefiro exercícios mais intensos, como musculação ou corrida. O Pilates ainda é para mim?",
+      "Como funciona o processo de desenvolvimento de um site com a Engajame! Design?",
     answer:
-      "Pilates complementa perfeitamente outros tipos de exercícios, ajudando a melhorar a força do core, a flexibilidade e a postura, o que pode beneficiar suas atividades de alta intensidade. Além disso, a prática regular de Pilates pode ajudar a prevenir lesões e melhorar seu desempenho em outros esportes e atividades físicas.",
+      "Começamos com uma análise detalhada das suas necessidades e objetivos. Em seguida, desenvolvemos um design personalizado e funcional, alinhado com sua marca. Mantemos você informado em todas as etapas até a entrega do site, pronto para converter visitantes em clientes.",
+  },
+  {
+    id: "6",
+    question:
+      "Quais resultados posso esperar ao contratar a gestão de tráfego pago da Engajame! Design?",
+    answer:
+      "Você pode esperar um aumento imediato na visibilidade online, mais acessos ao seu site e, principalmente, um crescimento significativo nas conversões. Nossas campanhas são otimizadas para maximizar seu retorno sobre o investimento.",
+  },
+  {
+    id: "7",
+    question: "A automação de vendas é complicada de implementar?",
+    answer:
+      "Não! Nós cuidamos de todo o processo de configuração e implementação, garantindo que as automações funcionem de forma simples e integrada ao seu negócio. Tudo é pensado para facilitar sua rotina e aumentar suas vendas.",
   },
 ];
 
@@ -50,8 +63,11 @@ const FaqItem: React.FC<FaqItemProps> = ({ question, answer }) => {
   };
 
   return (
-    <div className="faq-item w-full max-w-2xl border-b-2 border-gray-300 pb-2">
-      <div className="faq-question flex justify-between" onClick={toggleFaq}>
+    <div className="faq-item w-full max-w-6xl pb-2">
+      <div
+        className="faq-question flex justify-between max-w-6xl border-b-2 border-gray-300"
+        onClick={toggleFaq}
+      >
         <span>{question}</span>
         <span className="text-3xl text-gray-600">{isOpen ? "-" : "+"}</span>
       </div>
@@ -62,13 +78,15 @@ const FaqItem: React.FC<FaqItemProps> = ({ question, answer }) => {
 
 export default function FAQ() {
   return (
-    <div className="flex flex-col items-center gap-2 w-full px-4 my-8" id="faq">
-      <h2 className="text-3xl sm:text-4xl py-4 mb-4 font-bold tracking-tight border-b-2">
-        Perguntas Frequentes
-      </h2>
-      {faqs.map((faq, index) => (
-        <FaqItem key={index} question={faq.question} answer={faq.answer} />
-      ))}
+    <div className="flex flex-col items-center w-full" id="faq">
+      <div className="flex flex-col px-6 lg:px-8 max-w-6xl w-full gap-10 mt-20 ">
+        <h2 className="text-[#F1B145] w-fit bg-black text-xl sm:text-2xl py-1 px-4 font-bold">
+          Perguntas Frequentes
+        </h2>
+        {faqs.map((faq, index) => (
+          <FaqItem key={index} question={faq.question} answer={faq.answer} />
+        ))}
+      </div>
     </div>
   );
 }

@@ -3,30 +3,30 @@ import { MdStar } from "react-icons/md";
 
 const testimonials = [
   {
-    name: "Alaís",
+    name: "Jaque",
     job: "",
-    text: "Muito boa... a fisioterapeuta Crislaine é muito atenciosa e uma excelente profissional!! Já em pouco tempo, estou vendo muito resultado!! Obrigada.",
+    text: "",
     src: "",
     stars: 5,
   },
   {
-    name: "Lya Mello",
+    name: "Maria",
     job: "",
-    text: "Está sendo ótima, minha prof. Daiana é maravilhosa! Estou me sentindo ótima e ela cuida com muito amor de seus alunos! Parabéns Cris e Daia pelo profissionalismo. Super indico🌻.",
+    text: "",
     src: "",
     stars: 5,
   },
   {
-    name: "Eduarda Fetter",
+    name: "Amanda",
     job: "",
-    text: "Excelente profissional, ambiente bem equipado e tranquilo. Além de ótimos resultados. Minha prof nota 1 milhão amo demais, melhor profissional de Florianópolis!",
+    text: "Amei demais o atendimento e serviço!!! Sem dúvidas a melhor empresa de design de Florianópolis.😍 São muito caprichosos e excelentes em tudo que fazem!!! ❤️ super recomento!!",
     src: "",
     stars: 5,
   },
   {
-    name: "Simone Rosa",
+    name: "Crislaine",
     job: "",
-    text: "A Cris é maravilhosa! Grande profissional!",
+    text: "",
     src: "",
     stars: 5,
   },
@@ -34,21 +34,18 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <div
-      className="flex flex-col items-center w-full bg-white"
-      id="testimonials"
-    >
-      <div className="flex flex-col py-10 items-center justify-center px-6 lg:px-8 max-w-5xl">
+    <div className="flex flex-col items-center w-full" id="testimonials">
+      <div className="flex flex-col px-6 lg:px-8 max-w-6xl w-full gap-10 mt-20">
         {/*Title*/}
-        <h2 className="text-3xl sm:text-4xl py-2 font-bold tracking-tight border-b-2">
+        <h2 className="text-[#F1B145] w-fit bg-black text-xl sm:text-2xl py-1 px-4 font-bold">
           Depoimentos
         </h2>
         {/*Headline*/}
-        <h3 className="w-full text-2xl font-bold mt-5">
+        <h3 className="w-full text-2xl font-bold">
           O que nossos clientes estão falando:
         </h3>
         {/*Cards*/}
-        <div className="flex flex-wrap h-full w-full justify-center items-start overflow-hidden mt-5">
+        <div className="flex flex-wrap h-full w-full justify-center items-start overflow-hidden ">
           {testimonials.map((testimonial) => (
             <div
               key={testimonial.name}

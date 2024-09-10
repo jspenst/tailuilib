@@ -19,11 +19,15 @@ const config: Config = {
       indigo: colors.indigo,
       yellow: colors.yellow,
       blue: colors.blue,
-      primary: "#0e5f60",
+      primary: "#F1B145",
+      secondary: "#EDEDED",
+    },
+    fontFamily: {
+      myriad: ["Myriad", ""],
     },
     extend: {
       backgroundImage: {
-        "hero-bg": "url('/hero-background.jpg')",
+        "hero-bg": "url('/hero-background.svg')",
         "bg-hero-small": "url('/hero-background-small.jpg')",
       },
     },

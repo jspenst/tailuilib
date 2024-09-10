@@ -2,9 +2,11 @@
 import { useState } from "react";
 import { MdClose, MdMenu } from "react-icons/md";
 import WhatsappCTA from "./WhatsappCTA";
+import Language from "./Language";
 
 const navigation = [
   { name: "Serviços", href: "#features", current: false },
+  { name: "Portfolio", href: "#portfolio", current: false },
   { name: "Equipe", href: "#team", current: true },
   { name: "Depoimentos", href: "#testimonials", current: false },
   { name: "FAQ", href: "#faq", current: false },
@@ -14,7 +16,7 @@ const navigation = [
 const logo = {
   src: "logo-small.png",
   alt: "Logo",
-  height: "h-16",
+  height: "h-12",
   span: "Logo",
 };
 
@@ -24,10 +26,10 @@ export default function NavBar() {
     mobileMenu ? setMobileMenu(false) : setMobileMenu(true);
   };
   return (
-    <header className=" fixed inset-x-0 top-0 z-50 divide-y h-[84px] bg-white">
+    <header className="fixed inset-x-0 top-0 z-50 h-[84px] bg-white">
       {/*Big Screen Navigation Menu*/}
       <nav
-        className="flex items-center justify-between p-4 lg:px-8 h-full"
+        className="flex items-center justify-between p-4 border-b-2 h-full"
         aria-label="Global"
       >
         <div className="flex lg:flex-1">
@@ -59,14 +61,14 @@ export default function NavBar() {
             <a
               key={item.name}
               href={item.href}
-              className="text-sm font-semibold leading-6 text-gray-900"
+              className="text-sm font-semibold leading-6 text-gray-900 text-xl"
             >
               {item.name}
             </a>
           ))}
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <WhatsappCTA />
+          <Language />
         </div>
       </nav>
       {/*Small Screen Navigation Menu*/}
@@ -91,7 +93,6 @@ export default function NavBar() {
           </div>
         ) : null}
       </>
-      <hr className="mx-4" />
     </header>
   );
 }

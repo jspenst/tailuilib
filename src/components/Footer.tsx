@@ -1,48 +1,39 @@
 import Image from "next/image";
 import SocialMedia from "./SocialMedia";
-import { BiLogoGmail, BiLogoWhatsapp, BiSolidMap } from "react-icons/bi";
+import { FaWhatsapp } from "react-icons/fa6";
 
 export default function Footer() {
+  const currentYear = new Date().getFullYear();
   return (
-    <div
-      className="flex flex-col sm:flex-row items-center justify-center w-full gap-8 h-84 bg-primary text-white"
-      id="footer"
-    >
-      <div className="flex flex-col sm:flex-row items-center justify-center w-full max-w-4xl gap-8 h-84 px-8">
-        <div className="w-full sm:w-1/3 flex justify-center items-center">
-          <Image
-            src="/logo-reste.png"
-            alt="Logo da Core Pilates"
-            width="200"
-            height="200"
-          />
-        </div>
-        <div className="w-full max-w-sm sm:w-1/3 flex flex-col gap-2">
-          <div>
-            <h3 className="font-bold">Contato</h3>
-            <div className="flex gap-2 items-center">
-              <BiLogoWhatsapp className="text-xl" />
-              <p>(48) 9 9153-7664</p>
-            </div>
-            <div className="flex gap-2 items-center">
-              <BiLogoGmail className="text-xl" />
-              <p>corepilatesfloripa@gmail.com</p>
-            </div>
+    <div id="footer">
+      <div className="my-24 flex flex-col gap-10 items-center justify-center px-8 text-center">
+        <h2 className="text-3xl font-bold">Ainda ficou com alguma dúvida?</h2>
+        <a
+          href="https://wa.me/5548992188987?text=Quero%20saber%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20servi%C3%A7os!&app_absent=1"
+          target="_blank"
+          className="rounded-md bg-primary px-3.5 py-2.5 text-2xl font-semibold text-black hover:text-[#F1B145] shadow-2xl hover:bg-black flex items-center gap-4"
+        >
+          FALE COM A GENTE <FaWhatsapp />
+        </a>
+      </div>
+      <div className="flex flex-col sm:flex-row items-center justify-center w-full gap-8 h-84 bg-primary text-white py-8">
+        <div className="flex flex-col sm:flex-row items-center justify-center w-full max-w-4xl gap-8 h-84 px-8">
+          <div className="w-full sm:w-1/3 flex justify-center items-center">
+            <Image
+              src="/logo-large.png"
+              alt="Logo da Engajame! Design"
+              width="200"
+              height="200"
+            />
           </div>
-          <div>
-            <h3 className="font-bold">Endereço</h3>
-            <div className="flex gap-2 items-center">
-              <BiSolidMap className="text-5xl" />
-              <p>
-                Rua João Gualberto Soares n° 117, sala 04 - Ingleses -
-                Florianópolis - SC
-              </p>
-            </div>
+          <div className="w-full sm:w-1/3 flex justify-center items-center">
+            <SocialMedia />
           </div>
         </div>
-        <div className="w-full sm:w-1/3 flex justify-center items-center">
-          <SocialMedia />
-        </div>
+      </div>
+      <div className="bg-primary w-full text-black flex justify-center text-xs font-bold px-8 py-2 text-center">
+        &copy; Copyright {currentYear}, ENGAJAME! DESIGN. Todos os direitos
+        reservados.
       </div>
     </div>
   );
