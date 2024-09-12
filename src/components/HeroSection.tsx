@@ -4,7 +4,7 @@ export default function HeroSection() {
   return (
     <div className="relative isolate h-full">
       {/*Conteudo*/}
-      <div className="w-full h-full flex flex-col items-center mx-auto pt-28 px-6 lg:px-8">
+      <div className="w-full h-full flex flex-col items-center mx-auto pt-28 lg:pt-36 px-6 lg:px-8">
         {/* 
         <div className="hidden max-w-2xl sm:mb-8 sm:flex sm:justify-center">
           <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-white ring-1 ring-gray-900/10 hover:ring-gray-900/20">
