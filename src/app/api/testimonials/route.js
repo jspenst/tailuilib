@@ -1,4 +1,4 @@
-export async function loadTestimonials() {
+export async function GET() {
   try {
     const res = await fetch(
       `https://pagesapi.engajamedesign.com.br/api/landing-pages/1?populate=deep`,
