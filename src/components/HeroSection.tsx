@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa";
 
 export default function HeroSection() {
@@ -28,13 +29,13 @@ export default function HeroSection() {
             vendas no ambiente digital.
           </p>
           <div className="mt-12 lg:mt-24 flex flex-col items-center justify-center">
-            <a
+            <Link
               href="https://wa.me/5548992188987?text=Quero%20solicitar%20um%20or%C3%A7amento!&app_absent=1"
               target="_blank"
-              className="rounded-md bg-primary px-3.5 py-2.5 text-xl font-semibold text-black hover:text-[#F1B145] shadow-sm hover:bg-black flex items-center gap-4"
+              className="rounded-md bg-primary px-3.5 py-2.5 text-xl font-semibold text-black hover:text-[#F1B145] shadow-sm hover:bg-black flex items-center gap-4 transition ease duration-300"
             >
               QUERO FAZER UM ORÇAMENTO <FaArrowRight />
-            </a>
+            </Link>
           </div>
         </div>
       </div>

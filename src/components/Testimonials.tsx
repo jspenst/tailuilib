@@ -32,7 +32,10 @@ const testimonials = [
   },
 ];
 
-export default function Testimonials() {
+export default async function Testimonials() {
+  const response = await fetch("http://localhost:3000/api/testimonials");
+  //const formData = await response.json();
+  //console.log(formData);
   return (
     <div className="flex flex-col items-center w-full" id="testimonials">
       <div className="flex flex-col px-6 lg:px-8 max-w-6xl w-full gap-10 mt-20">

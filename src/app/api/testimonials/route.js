@@ -5,10 +5,11 @@ export async function GET() {
       { next: { revalidate: 60 } }
     );
     const data = await res.json();
-    const testimonials = await data.data.section[4].testimonial;
-    return testimonials;
+    const testimonials = await data.data.attributes.section[4].testimonial;
+    console.log(testimonials);
+    return new Response(testimonials).json();
   } catch (e) {
     console.log(`The error is ${e}`);
-    return [];
+    return new Response([]).json();
   }
 }

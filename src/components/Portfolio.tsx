@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
@@ -74,13 +75,13 @@ export default function Portfolio() {
               >
                 <div className="absolute top-0 left-0 h-60 w-full bg-transparent hover:bg-black/80 flex flex-col gap-4 z-2 items-center justify-center text-[#F1B145] font-bold transition ease duration-300">
                   <h3 className="hidden group-hover:flex">{job.title}</h3>
-                  <a
+                  <Link
                     className="hidden group-hover:flex"
                     href={job.link}
                     target="_blank"
                   >
                     Acessar
-                  </a>
+                  </Link>
                 </div>
                 <img src={job.picture} alt="logo" className="h-60" />
               </div>

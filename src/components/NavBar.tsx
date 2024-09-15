@@ -3,6 +3,7 @@ import { useState } from "react";
 import { MdClose, MdMenu } from "react-icons/md";
 import WhatsappCTA from "./WhatsappCTA";
 import Language from "./Language";
+import Link from "next/link";
 
 const navigation = [
   { name: "Serviços", href: "#features", current: false },
@@ -33,14 +34,14 @@ export default function NavBar() {
         aria-label="Global"
       >
         <div className="flex lg:flex-1">
-          <a href="#" className="p-1.5">
+          <Link href="/" className="p-1.5">
             <span className="sr-only">{logo.span}</span>
             <img
               className={"w-auto " + logo.height}
               src={logo.src}
               alt={logo.alt}
             />
-          </a>
+          </Link>
         </div>
         <div className="flex lg:hidden">
           <button
@@ -80,13 +81,13 @@ export default function NavBar() {
           >
             <div className="flex flex-col justify-center items-center gap-8 pt-8">
               {navigation.map((item) => (
-                <a
+                <Link
                   key={item.name}
                   href={item.href}
                   className="text-lg font-semibold leading-6 text-gray-900"
                 >
                   {item.name}
-                </a>
+                </Link>
               ))}
             </div>
             <WhatsappCTA />
