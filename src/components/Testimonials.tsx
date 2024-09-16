@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { MdStar } from "react-icons/md";
-
+{
+  /*
 const testimonials = [
   {
     name: "Jaque",
@@ -31,11 +32,16 @@ const testimonials = [
     stars: 5,
   },
 ];
-
+*/
+}
 export default async function Testimonials() {
-  const response = await fetch("http://localhost:3000/api/testimonials");
-  //const formData = await response.json();
-  //console.log(formData);
+  const response = await fetch(
+    `https://pagesapi.engajamedesign.com.br/api/landing-pages/1?populate=deep`,
+    { next: { revalidate: 60 } }
+  );
+  const data = await response.json();
+  const testimonials = await data.data.attributes.section[4].testimonial;
+
   return (
     <div className="flex flex-col items-center w-full" id="testimonials">
       <div className="flex flex-col px-6 lg:px-8 max-w-6xl w-full gap-10 mt-20">
@@ -51,7 +57,7 @@ export default async function Testimonials() {
         <div className="flex flex-wrap h-full w-full justify-center items-start overflow-hidden ">
           {testimonials.map((testimonial) => (
             <div
-              key={testimonial.name}
+              key={testimonial.id}
               className="flex flex-col gap-3 overflow-hidden items-center justify-center w-full max-w-72 m-2 p-6 shadow-xl rounded-xl bg-white"
             >
               <div className="flex w-full">
@@ -91,12 +97,12 @@ export default async function Testimonials() {
                   }
                 />
               </div>
-              <p className="flex w-full text-xs">{testimonial.text}</p>
+              <p className="flex w-full text-xs">{testimonial.testimonial}</p>
               <div className="flex w-full items-center gap-4">
                 {testimonial.src ? (
                   <div className="rounded-full bg-[#EDEDED] h-12 w-12 overflow-hidden">
                     <Image
-                      src={testimonial.src}
+                      src={testimonial.avatar}
                       alt="Client foto"
                       height={200}
                       width={200}

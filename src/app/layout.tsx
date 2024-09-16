@@ -13,6 +13,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
+      <meta
+        name="google-site-verification"
+        content="BOuHIAQP3CI_4HtSWi5HjqiExg3cnIHMUUwOO2Pslyw"
+      />
       <body className="font-myriad">{children}</body>
     </html>
   );
