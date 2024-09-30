@@ -61,7 +61,7 @@ export default function NavBar() {
           {navigation.map((item) => (
             <div
               key={item.name}
-              className="h-full hover:bg-black hover:text-[#F1B145] p-6 transition ease duration-300"
+              className="h-full hover:bg-secondary hover:text-primary p-6 transition ease duration-300"
             >
               <Link
                 href={item.href}

@@ -19,8 +19,8 @@ const config: Config = {
       indigo: colors.indigo,
       yellow: colors.yellow,
       blue: colors.blue,
-      primary: "#F1B145",
-      secondary: "#EDEDED",
+      primary: "#D49C73",
+      secondary: "#3F1500",
     },
     fontFamily: {
       myriad: ["Myriad", ""],
