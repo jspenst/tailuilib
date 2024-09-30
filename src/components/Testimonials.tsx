@@ -1,39 +1,6 @@
 import Image from "next/image";
 import { MdStar } from "react-icons/md";
-{
-  /*
-const testimonials = [
-  {
-    name: "Jaque",
-    job: "",
-    text: "",
-    src: "",
-    stars: 5,
-  },
-  {
-    name: "Maria",
-    job: "",
-    text: "",
-    src: "",
-    stars: 5,
-  },
-  {
-    name: "Amanda",
-    job: "",
-    text: "Amei demais o atendimento e serviço!!! Sem dúvidas a melhor empresa de design de Florianópolis.😍 São muito caprichosos e excelentes em tudo que fazem!!! ❤️ super recomento!!",
-    src: "",
-    stars: 5,
-  },
-  {
-    name: "Crislaine",
-    job: "",
-    text: "",
-    src: "",
-    stars: 5,
-  },
-];
-*/
-}
+
 export default async function Testimonials() {
   const response = await fetch(
     `https://pagesapi.engajamedesign.com.br/api/landing-pages/1?populate=deep`,
@@ -43,8 +10,8 @@ export default async function Testimonials() {
   const testimonials = await data.data.attributes.section[4].testimonial;
 
   return (
-    <div className="flex flex-col items-center w-full" id="testimonials">
-      <div className="flex flex-col px-6 lg:px-8 max-w-6xl w-full gap-10 mt-20">
+    <div className="flex flex-col items-center w-full pt-24" id="testimonials">
+      <div className="flex flex-col px-6 lg:px-8 max-w-6xl w-full gap-10">
         {/*Title*/}
         <h2 className="text-[#F1B145] w-fit bg-black text-xl sm:text-2xl py-1 px-4 font-bold">
           Depoimentos
@@ -55,10 +22,10 @@ export default async function Testimonials() {
         </h3>
         {/*Cards*/}
         <div className="flex flex-wrap h-full w-full justify-center items-start overflow-hidden ">
-          {testimonials.map((testimonial) => (
+          {testimonials.map((testimonial: any) => (
             <div
               key={testimonial.id}
-              className="flex flex-col gap-3 overflow-hidden items-center justify-center w-full max-w-72 m-2 p-6 shadow-xl rounded-xl bg-white"
+              className="flex flex-col gap-3 overflow-hidden items-center justify-top w-full max-w-72 min-h-48 m-2 p-6 shadow-xl rounded-xl bg-white"
             >
               <div className="flex w-full">
                 <MdStar

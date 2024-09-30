@@ -27,7 +27,8 @@ const config: Config = {
     },
     extend: {
       backgroundImage: {
-        "hero-bg": "url('/hero-background.svg')",
+        "main-bg": "url('/images/main-bg.svg')",
+        "hero-bg": "url('/images/hero-background.svg')",
         "bg-hero-small": "url('/hero-background-small.jpg')",
       },
     },

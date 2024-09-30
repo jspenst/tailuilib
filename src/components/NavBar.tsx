@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { MdClose, MdMenu } from "react-icons/md";
-import WhatsappCTA from "./WhatsappCTA";
+import WhatsappCTA from "./CTA/WhatsappCTA";
 import Language from "./Language";
 import Link from "next/link";
 
@@ -30,7 +30,7 @@ export default function NavBar() {
     <header className="fixed inset-x-0 top-0 z-50 h-[84px] bg-white">
       {/*Big Screen Navigation Menu*/}
       <nav
-        className="flex items-center justify-between p-4 border-b-2 h-full"
+        className="flex items-center justify-between px-4 border-b-2 h-full"
         aria-label="Global"
       >
         <div className="flex lg:flex-1">
@@ -57,17 +57,22 @@ export default function NavBar() {
             )}
           </button>
         </div>
-        <div className="hidden lg:flex lg:gap-x-12">
+        <div className="hidden lg:flex">
           {navigation.map((item) => (
-            <a
+            <div
               key={item.name}
-              href={item.href}
-              className="text-sm font-semibold leading-6 text-gray-900 text-xl"
+              className="h-full hover:bg-black hover:text-[#F1B145] p-6 transition ease duration-300"
             >
-              {item.name}
-            </a>
+              <Link
+                href={item.href}
+                className="text-sm font-semibold leading-6 text-xl"
+              >
+                {item.name}
+              </Link>
+            </div>
           ))}
         </div>
+
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <Language />
         </div>

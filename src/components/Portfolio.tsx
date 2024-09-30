@@ -53,7 +53,7 @@ export default function Portfolio() {
   };
   return (
     <div
-      className="flex flex-col items-center w-full h-full z-50 mt-24"
+      className="flex flex-col items-center w-full h-full z-50 pt-24"
       id="portfolio"
     >
       <div className="flex flex-col max-w-6xl gap-10">

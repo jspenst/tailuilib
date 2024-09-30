@@ -68,7 +68,7 @@ const FaqItem: React.FC<FaqItemProps> = ({ question, answer }) => {
         className="faq-question flex justify-between max-w-6xl border-b-2 border-gray-300"
         onClick={toggleFaq}
       >
-        <span>{question}</span>
+        <span className="font-bold">{question}</span>
         <span className="text-3xl text-gray-600">{isOpen ? "-" : "+"}</span>
       </div>
       {isOpen && <div className="faq-answer p-2">{answer}</div>}
@@ -78,8 +78,8 @@ const FaqItem: React.FC<FaqItemProps> = ({ question, answer }) => {
 
 export default function FAQ() {
   return (
-    <div className="flex flex-col items-center w-full" id="faq">
-      <div className="flex flex-col px-6 lg:px-8 max-w-6xl w-full gap-10 mt-20 ">
+    <div className="flex flex-col items-center w-full pt-24" id="faq">
+      <div className="flex flex-col px-6 lg:px-8 max-w-6xl w-full gap-10">
         <h2 className="text-[#F1B145] w-fit bg-black text-xl sm:text-2xl py-1 px-4 font-bold">
           Perguntas Frequentes
         </h2>

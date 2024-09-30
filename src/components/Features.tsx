@@ -7,7 +7,7 @@ import { SiGoogleads } from "react-icons/si";
 export default function Features() {
   return (
     <div
-      className="flex flex-col items-center w-full h-full z-50 mt-24"
+      className="flex flex-col items-center w-full h-full z-50 pt-24"
       id="features"
     >
       <div className="flex flex-col px-6 lg:px-8 max-w-6xl w-full gap-10">

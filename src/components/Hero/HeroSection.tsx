@@ -6,8 +6,8 @@ export default function HeroSection() {
     <div className="relative isolate h-full">
       {/*Conteudo*/}
       <div className="w-full h-full flex flex-col items-center mx-auto pt-28 lg:pt-36 px-6 lg:px-8">
-        <div className="text-center max-w-3xl">
-          <h1 className="text-4xl font-bold text-black sm:text-5xl ">
+        <div className="text-center max-w-4xl">
+          <h1 className="text-4xl font-bold text-black sm:text-5xl">
             Transforme seu Negócio com Criatividade, Excelência e Propósito
           </h1>
           <p className="mt-12 lg:mt-24 text-lg text-black">
